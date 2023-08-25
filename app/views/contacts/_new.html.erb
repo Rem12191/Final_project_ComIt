@@ -1,0 +1,29 @@
+<section class="contact" id="contact">
+  <div class="title">
+    <h2 class="tittleText"><span>C</span>ontact Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Ut sem neque, auctor ac condimentum tempus, viverra eget tortor.
+    </p>
+  </div>
+  <h2>Contact Us</h2>
+  <div class="contactForm">
+    <h3>Send Message</h3>
+    <%= form_with(url: contacts_path, method: :post) do |form| %>
+      <div class="inputBox">
+        <%= form.label :name %>
+        <%= form.text_field :name, placeholder: 'Name' %>
+      </div>
+      <div class="inputBox">
+        <%= form.label :email %>
+        <%= form.text_field :email, placeholder: 'Email' %>
+      </div>
+      <div class="inputBox">
+        <%= form.label :message %>
+        <%= form.text_area :message, placeholder: 'Message' %>
+      </div>
+      <div class="inputBox">
+        <%= form.submit 'Send' %>
+      </div>
+    <% end %>
+  </div>
+</section>
